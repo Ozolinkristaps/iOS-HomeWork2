@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,22 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MZ-b3-dgI">
-                                <rect key="frame" x="0.0" y="-14" width="414" height="910"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ievadiet pārbaudāmā laika parametrus:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2E4-7R-eD4">
-                                <rect key="frame" x="56" y="94" width="303" height="54.666666666666657"/>
+                                <rect key="frame" x="56" y="94" width="303" height="55"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHW-U7-m7J">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHW-U7-m7J">
                                 <rect key="frame" x="0.0" y="177" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="-978296399.65496099">
                                     <!--1970-01-01 03:00:00 +0000-->
                                 </date>
@@ -45,18 +37,34 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="lv"/>
                             </datePicker>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4W-16-SlU">
+                                <rect key="frame" x="17" y="401" width="380" height="380"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="380" id="E33-hg-XVS"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="380" id="ygu-xY-Rr3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="oHW-U7-m7J" firstAttribute="top" secondItem="2E4-7R-eD4" secondAttribute="bottom" constant="28" id="4VL-9q-2bg"/>
+                            <constraint firstItem="i4W-16-SlU" firstAttribute="top" secondItem="oHW-U7-m7J" secondAttribute="bottom" constant="8" id="BCG-Eu-gR2"/>
+                            <constraint firstItem="i4W-16-SlU" firstAttribute="top" secondItem="oHW-U7-m7J" secondAttribute="bottom" constant="8" id="JYN-d3-bdK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2E4-7R-eD4" secondAttribute="trailing" constant="35" id="LWG-43-JUI"/>
+                            <constraint firstItem="i4W-16-SlU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="17" id="Xmh-tT-99s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i4W-16-SlU" secondAttribute="bottom" constant="81" id="dhm-w9-v3r"/>
                             <constraint firstItem="2E4-7R-eD4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="eLP-GN-20r"/>
                             <constraint firstItem="2E4-7R-eD4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="mEp-Yf-Uea"/>
+                            <constraint firstAttribute="trailing" secondItem="i4W-16-SlU" secondAttribute="trailing" constant="17" id="tOz-JR-3Ns"/>
+                            <constraint firstAttribute="trailing" secondItem="oHW-U7-m7J" secondAttribute="trailing" id="v79-wy-n0l"/>
+                            <constraint firstItem="oHW-U7-m7J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vuS-Fw-hgd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="backgroundOverlay" destination="4MZ-b3-dgI" id="GYb-GK-e0t"/>
                         <outlet property="lightTimePicker" destination="oHW-U7-m7J" id="GWe-wP-TvM"/>
+                        <outlet property="trafficLight" destination="i4W-16-SlU" id="jGf-uR-PU4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
