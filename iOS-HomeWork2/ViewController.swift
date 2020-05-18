@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // set background image
         setBackground()
-        styleTrafficLight()
+        setTrafficLight()
         // set font color for DatePicker to white
         lightTimePicker.setValue(UIColor.white, forKey: "textColor")
         // set default traffic light color
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         view.sendSubviewToBack(backgroundImageView)
     }
     
-    func styleTrafficLight() {
+    func setTrafficLight() {
         trafficLight.layer.cornerRadius = trafficLight.frame.size.width/2
     }
     
